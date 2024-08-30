@@ -7,7 +7,7 @@ Bu şekilde tasarım ilgili fonksiyonun olduğu türlere ilişkin değerlerin o 
 
 
 fun main() {
-    mod()
+    inc()
 }
 
 fun plus() {
@@ -69,4 +69,37 @@ fun mod() {
     println("a % b = ${a % b}")
     println("a.rem(b) = ${a.rem(b)}")
     println("$a % $b = ${a.mod(b)}") // Matematikteki mod işlemine karşılık geliyor
+}
+
+fun unaryMinus() {
+    // İşaret - operatörü ve unaryMinus fonksiyonu
+    print("Input a number:")
+    val a = readln().toInt()
+    var b = -a
+    println("b = $b")
+    b = a.unaryMinus()
+    println("b = $b")
+}
+
+fun unaryPlus() {
+    // İşaret + operatörü ve unaryPlus fonksiyonu
+    print("Input a number:")
+    val a = readln().toInt()
+    var b = +a
+    println("b = $b")
+    b = a.unaryPlus()
+    println("b = $b")
+}
+
+
+fun inc() {
+    // ++ operatörünün kullanımı nasıl olursa olsun değişkeni bir artırır
+    var a = 10
+    a++ // or ++a
+    println("a = $a")
+
+    var b = 10
+    val c = b++
+    println("b = $b") // ++b => b = 11 _____ b++ => b = 11
+    println("c = $c") // ++b => c = 11 _____ b++ => c = 10
 }
