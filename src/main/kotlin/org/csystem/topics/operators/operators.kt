@@ -6,8 +6,22 @@ Bu şekilde tasarım ilgili fonksiyonun olduğu türlere ilişkin değerlerin o 
 * */
 
 
+
 fun main() {
-    inc()
+    print("Birinci sayıyı giriniz:")
+    val a = readln().toInt()
+
+    print("İkinci sayıyı giriniz:")
+    val b = readln().toInt()
+
+    println("$a > $b -> ${a > b}")
+    println("$a > $b -> ${a.compareTo(b) > 0}")
+    println("$a <= $b -> ${a <= b}")
+    println("$a <= $b -> ${a.compareTo(b) <= 0}")
+    println("$a < $b -> ${a < b}")
+    println("$a < $b -> ${a.compareTo(b) < 0}")
+    println("$a >= $b -> ${a >= b}")
+    println("$a >= $b -> ${a.compareTo(b) >= 0}")
 }
 
 fun plus() {
@@ -92,7 +106,7 @@ fun unaryPlus() {
 }
 
 
-fun inc() {
+fun inc1() {
     // ++ operatörünün kullanımı nasıl olursa olsun değişkeni bir artırır
     var a = 10
     a++ // or ++a
@@ -102,4 +116,58 @@ fun inc() {
     val c = b++
     println("b = $b") // ++b => b = 11 _____ b++ => b = 11
     println("c = $c") // ++b => c = 11 _____ b++ => c = 10
+}
+
+fun inc2() {
+    // ++ operatörünün fonksiyon karşılığı olan inc fonksiyonu artırılmış değeri döndürür.
+    // Temel türlere ilişkin sınıflar immutable olduğundan inc fonksiyonu artırma işlemini yapmaz.
+    // Artırılmış değere geri döner
+    val a : Int = 10
+    val b = a.inc() //val b = a + 1
+
+    println("a = $a")
+    println("b = $b")
+}
+
+fun inc3() {
+    // ++ operatörünün fonksiyon karşılığı
+    var a = 10;
+    a = a.inc(); // a = a + 1
+    print("a = $a")
+}
+
+fun inc4() {
+    // ++ operatörünün fonksiyon karşılığı
+    var a = 10
+    val b = a
+    a = a.inc()
+
+    println("a = $a")
+    println("b = $b")
+}
+
+fun inc5() {
+    // ++ operatörünün fonksiyon karşılığı
+    var a = 10
+    a = a.inc()
+    val b = a
+
+    println("a = $a")
+    println("b = $b")
+}
+
+fun dec() {
+    // `--` operatörünün fonksiyon karşılığı. dec fonksiyonu azaltılmış değeri döndürür.
+    // Temel türlere ilişkin sınıflar immutable olduğundan dec fonksiyonu artırma işlemini yapmaz.
+    // Artırılmış değere geri döner
+    var a = 10
+    val b = a.dec() //b = a - 1
+    println("a = $a")
+    println("b = $b")
+}
+
+fun dec1() {
+    var a = 10
+    a = a.dec() // a = a -1
+    println("a = $a")
 }
