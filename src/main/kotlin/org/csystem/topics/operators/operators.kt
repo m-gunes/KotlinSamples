@@ -7,21 +7,37 @@ Bu şekilde tasarım ilgili fonksiyonun olduğu türlere ilişkin değerlerin o 
 
 
 
+
 fun main() {
-    print("Birinci sayıyı giriniz:")
-    val a = readln().toInt()
+    // Kotlin'de koşul operatörü (conditional operator) yoktur.
+    println("Input a number:")
+    var a = readln().toInt()
+    println(if(a % 2 == 0) "even" else "odd")
 
-    print("İkinci sayıyı giriniz:")
-    val b = readln().toInt()
+}
 
-    println("$a > $b -> ${a > b}")
-    println("$a > $b -> ${a.compareTo(b) > 0}")
-    println("$a <= $b -> ${a <= b}")
-    println("$a <= $b -> ${a.compareTo(b) <= 0}")
-    println("$a < $b -> ${a < b}")
-    println("$a < $b -> ${a.compareTo(b) < 0}")
-    println("$a >= $b -> ${a >= b}")
-    println("$a >= $b -> ${a.compareTo(b) >= 0}")
+fun assignment() {
+    val a: Int
+    val b: Int
+    val c: Int = 10
+    // a = b = c // Error
+}
+
+fun foo() : Boolean {
+    println("foo")
+
+    return true
+}
+
+fun bar() : Boolean {
+    println("bar")
+
+    return false
+}
+fun tar(): Boolean {
+    println("tar")
+
+    return false
 }
 
 fun plus() {
