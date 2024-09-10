@@ -17,7 +17,6 @@ fun runIsPalindromeTest() {
         if(value == 0)
             break
     }
-
 }
 
 fun isPalidrome(a: Int) = reverse(a) == a

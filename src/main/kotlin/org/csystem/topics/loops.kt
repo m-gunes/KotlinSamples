@@ -1,6 +1,6 @@
 package org.csystem.topics
 
-fun main() = differentWhile()
+fun main() = forWithStep()
 
 fun classicWhile() {
     // Kontrolün başta yapıldığı while döngüsü
@@ -47,3 +47,38 @@ fun differentWhile() {
     } while (a != 0)
 }
 
+
+fun enhancedFor() {
+    for(i in 1..10)  //[1, 10]
+        print("$i ")
+
+    println("Input a number: ")
+    val n = readln().toInt()
+    for(i in 1..n) // [1, n]
+        print("$i ")
+
+}
+
+fun minMaxFor() {
+    print("Input a min value: ")
+    val min = readln().toInt()
+
+    print("Input a max value: ")
+    val max = readln().toInt()
+
+    for(i in min..max)
+        print("$i ")
+}
+
+fun notExistFor() {
+    for(i in 10..1) // it doesn't work
+        print("$i ")
+}
+
+fun forWithStep() {
+    print("Input a number: ")
+    val n = readln().toInt()
+    for(i in 1..n step 2) // step 2 => i += 2
+        print("$i ")
+
+}
