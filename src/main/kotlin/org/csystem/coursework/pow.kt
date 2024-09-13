@@ -35,3 +35,13 @@ fun pow(a: Int, b: Int): Int {
 
     return result
 }
+
+fun powW(a: Int, b: Int): Int {
+    var result = 1
+    var n = b
+
+    while(n-- > 0)
+        result *= a
+
+    return result
+}
