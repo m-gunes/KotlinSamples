@@ -1,6 +1,6 @@
 package org.csystem.topics
 
-fun main() = forWithStep()
+fun main() = rageUntil()
 
 fun classicWhile() {
     // Kontrolün başta yapıldığı while döngüsü
@@ -80,5 +80,77 @@ fun forWithStep() {
     val n = readln().toInt()
     for(i in 1..n step 2) // step 2 => i += 2
         print("$i ")
+}
 
+
+fun forDownTo(){
+    // downTo infix fonksiyonu ile for döngüsü içerisinde ters sırada dönen bir döngü yazılabilir
+    print("Input first number:")
+    val a = readln().toInt()
+
+    print("Input second number:")
+    val b = readln().toInt()
+
+    for (i in b downTo a )
+        print("$i ")
+}
+
+fun forDownToAndStep(){
+    // Aşağıdaki örnekte downTo ve step fonksiyonları birlikte kullanılmıştır
+    print("Input first number:")
+    val a = readln().toInt()
+
+    print("Input second number:")
+    val b = readln().toInt()
+
+    for (i in b downTo a  step 2)
+        print("$i ")
+}
+
+fun forUntilUsage() {
+    // until infix fonksiyonu ile [a, b) aralığında döngü deyimi oluşturulabilir
+    print("Input first number:")
+    val a = readln().toInt()
+
+    print("Input second number:")
+    val b = readln().toInt()
+
+    for(i in a until b)
+        print("$i ")
+}
+
+
+fun forUntilAndStepUsage() {
+    // until infix fonksiyonu ile step fonksiyonunun kullanımı
+    print("Input first number:")
+    val a = readln().toInt()
+
+    print("Input second number:")
+    val b = readln().toInt()
+
+    for(i in a until b step 2)
+        print("$i ")
+}
+
+
+fun notCorrectStep() {
+    // Aşağıdaki örnekte exception oluşur. step'e verilen argüman pozitif bir değer olmalıdır. Buradaki örnek geriye doğru dolaşmak anlamına gelmez
+    val a = 10
+    val b = 1
+
+    for (i in a..b step -1)
+        print("$i ")
+
+    println()
+}
+
+fun rageUntil() {
+    print("Input first number:")
+    val a = readln().toInt()
+
+    print("Input second number:")
+    val b = readln().toInt()
+
+    for(i in a..<b)
+        print("$i ")
 }
