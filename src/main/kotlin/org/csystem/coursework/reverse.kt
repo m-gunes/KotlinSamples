@@ -1,11 +1,10 @@
 package org.csystem.coursework
 
 /*---------------------------------------------------------------------------------------------------------------------
-    Sınıf Çalışması:
-        Parametresi ile aldığı Int türden bir sayının tersini döndüren reverse isimli fonksiyonu yazınız ve aşağıdaki
-        kod ile test ediniz.
+    Sınıf Çalışması: Parametresi ile aldığı Int türden bir sayının tersini döndüren reverse isimli fonksiyonu yazınız
+    ve aşağıdaki kod ile test ediniz.
 
-        Algoritma: 123 -> 3 -> 3 * 10 + 2 = 32 -> 32 * 10 + 1 = 321
+    Algoritma: 123 -> 3 -> 3 * 10 + 2 = 32 -> 32 * 10 + 1 = 321
 ---------------------------------------------------------------------------------------------------------------------*/
 fun main() = runReverseTest()
 
@@ -28,5 +27,6 @@ fun reverse(a: Int): Int {
         result = result * 10 + temp % 10
         temp /= 10
     }
-    return result
+
+    return result;
 }
