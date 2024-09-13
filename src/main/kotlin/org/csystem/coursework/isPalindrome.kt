@@ -1,9 +1,8 @@
 package org.csystem.coursework
 
 /*---------------------------------------------------------------------------------------------------------------------
-    Sınıf Çalışması:
-        Parametresi ile aldığı Int türden bir sayının palindrom olup olmadığını test eden isPalindrome fonksiyonunu
-        yazınız ve aşağıdaki kod ile test ediniz.
+    Sınıf Çalışması: Parametresi ile aldığı Int türden bir sayının palindrom olup olmadığını test eden isPalindrome
+    fonksiyonunu yazınız ve aşağıdaki kod ile test ediniz.
 ---------------------------------------------------------------------------------------------------------------------*/
 
 fun main() = runIsPalindromeTest()
