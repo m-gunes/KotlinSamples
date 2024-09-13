@@ -1,6 +1,4 @@
-package org.csystem.coursework
-
-import kotlin.math.log10
+package org.csystem.casestudies
 
 /*---------------------------------------------------------------------------------------------------------------------
     Sınıf Çalışması: Parametresi ile aldığı bir sayının basamaklarının basamak sayıncı kuvvetleri toplamının

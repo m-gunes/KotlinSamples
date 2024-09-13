@@ -1,4 +1,4 @@
-package org.csystem.coursework
+package org.csystem.casestudies
 
 /*---------------------------------------------------------------------------------------------------------------------
     Sınıf Çalışması: Parametresi ile aldığı Int türden bir sayının palindrom olup olmadığını test eden isPalindrome

@@ -1,4 +1,4 @@
-package org.csystem.coursework
+package org.csystem.casestudies
 
 import kotlin.math.abs
 

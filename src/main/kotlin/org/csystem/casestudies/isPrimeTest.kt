@@ -1,4 +1,4 @@
-package org.csystem.coursework
+package org.csystem.casestudies
 
 fun main() {
     println(if (isPrimeWithCount(1_000_003)) "Asal" else "Asal değil")

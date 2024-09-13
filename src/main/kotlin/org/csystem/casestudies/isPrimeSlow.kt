@@ -1,4 +1,4 @@
-package org.csystem.coursework
+package org.csystem.casestudies
 
 /*---------------------------------------------------------------------------------------------------------------------
     Bir sayının asal olup olmadığını test eden isPrime fonksiyonu ve test kodu

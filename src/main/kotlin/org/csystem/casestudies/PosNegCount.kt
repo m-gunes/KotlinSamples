@@ -1,4 +1,4 @@
-package org.csystem.coursework
+package org.csystem.casestudies
 
 /*---------------------------------------------------------------------------------------------------------------------
     Sınıf Çalışması: Klavyeden sıfır girilene kadar alınan sayılardan pozitif ve negatif olanlarının ayrı ayrı
