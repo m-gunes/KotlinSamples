@@ -1,4 +1,4 @@
-package org.csystem.topics
+package org.csystem.subject
 
 fun main() = rageUntil()
 

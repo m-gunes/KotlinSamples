@@ -1,4 +1,4 @@
-package org.csystem.topics
+package org.csystem.subject
 
 /*---------------------------------------------------------------------------------------------------------------------
     Kotlin'de switch deyimi yoktur. Ancak benzer şekilde kullanılabilecek when ifadesi (when expression) vardır.

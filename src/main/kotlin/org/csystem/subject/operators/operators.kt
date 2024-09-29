@@ -1,4 +1,4 @@
-package org.csystem.topics.operators
+package org.csystem.subject.operators
 
 /*
 Kotlin'de her operatörün karşılık geldiği bir fonksiyon bulunmaktadır.
