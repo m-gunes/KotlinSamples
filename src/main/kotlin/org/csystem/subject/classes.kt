@@ -1,7 +1,7 @@
 package org.csystem.subject
 
 
-fun main() = runSample()
+fun main() = runExamples()
 
 fun runDevice() {
     val d = DeviceInfo()
@@ -52,10 +52,36 @@ fun runSample() {
     val a = 10
 
     //...
-    s.foo(a) // error: applicable function yok. Int parametreli foo fonksiyonunu kaldırildiginda hata olusur.
+    // s.foo(a) // error: applicable function yok. Int parametreli foo fonksiyonunu kaldırildiginda hata olusur.
     // Eger s.foo(10) seklinde cagirilsaydi hata olmayacakti. Çünkü fonksiyon çağrısında argüman olarak verilen Int türden ifade bir sabit olduğundan Long türüne de doğrudan (implicit) dönüşebilir.
 
 }
+
+fun runExamples() {
+   val s = Sample1()
+    s.x = 10
+    println("---------------------------------------------------")
+
+    s.y = 3.4
+    println("---------------------------------------------------")
+
+    println("s.x = ${s.x}")
+    println("---------------------------------------------------")
+    println("s.y = ${s.y}")
+    println("---------------------------------------------------")
+    println(s.x * 2)
+    println("---------------------------------------------------")
+    ++s.x //s.x = s.x + 1
+    println("---------------------------------------------------")
+    println("s.x = ${s.x}")
+    println("---------------------------------------------------")
+    println("s.y = ${s.y}")
+    println("---------------------------------------------------")
+
+
+}
+
+
 // Sınıfın public primary ctor'u
 //class Sample(a: Int, b:Double) {}
 
@@ -196,4 +222,26 @@ class Sample {
 //    fun foo(a: Int = 34, b: Float = 4.5F) = println("foo(Int, Float)")
     fun foo(a: Long = 0, b: Double = 4.5) = println("foo(Long, Double)")
     fun foo() = println("foo()")
+}
+
+class Sample1 {
+    var x: Int = 0
+        set(value) {
+            println("SetX")
+            field = value
+        }
+        get() {
+            println("GetX")
+            return field
+        }
+
+    var y: Double = 0.0
+        set(value) {
+            println("SetY")
+            field = value
+        }
+        get() {
+            println("GetY")
+            return field
+        }
 }
