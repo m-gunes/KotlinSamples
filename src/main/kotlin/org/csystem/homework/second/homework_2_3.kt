@@ -1,8 +1,8 @@
 package org.csystem.homework.second
 
-fun main() = runPrimeFactorsTest()
+fun main() = runPrimeFactors()
 
-fun runPrimeFactorsTest() {
+fun runPrimeFactors() {
     print("Input a number:")
     val a = readln().toInt()
     printPrimeFactors(a)
