@@ -22,7 +22,7 @@ fun runChangeCaseTest() {
 }
 
 
-fun changeCase(s: String): String {
+fun changeCase_v1(s: String): String {
     val sb = StringBuilder()
 
     for (c in s)
@@ -30,6 +30,30 @@ fun changeCase(s: String): String {
             sb.append(c.lowercaseChar())
         else
             sb.append(c.uppercaseChar())
+
+    return sb.toString()
+}
+
+fun changeCase_v2(s: String): String {
+    val sb = StringBuilder(s)
+
+    for (i in s.indices)
+        sb[i] = if (sb[i].isUpperCase())
+            sb[i].lowercaseChar()
+        else
+            sb[i].uppercaseChar()
+
+    return sb.toString()
+}
+
+fun changeCase(s: String): String {
+    val sb = StringBuilder(s)
+
+    for (i in s.indices)
+        sb[i] = when {
+            s[i].isUpperCase() -> s[i].lowercaseChar()
+            else -> s[i].uppercaseChar()
+        }
 
     return sb.toString()
 }
