@@ -5,14 +5,15 @@ import org.csystem.casestudies.isPrime
 fun main() = runGoldbach()
 
 fun runGoldbach() {
-    print("Input an even number greater then 2:")
+    print("Input an even number greater than 2:")
     val a = readln().toLong()
-    printTwoPrimeNumber(a)
-
+    printGoldbach(a)
 }
 
-fun printTwoPrimeNumber(a: Long) {
-    for (i in 2..a)
-        if(isPrime(i))
-            println(i)
+fun printGoldbach(a: Long) {
+    for (x in a-1 downTo 2) {
+        val y = a-x
+        if (x >= y && isPrime(x) && isPrime(y))
+            println("$x + $y = $a")
+    }
 }
