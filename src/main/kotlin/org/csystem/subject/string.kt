@@ -2,7 +2,7 @@ package org.csystem.subject
 
 import kotlin.random.Random
 
-fun main() = upperAndLowerCaseInChar()
+fun main() = checkEmailInput()
 
 fun compareObject() {
     print("Input a number:")
@@ -171,4 +171,65 @@ fun upperAndLowerCaseInChar() {
     println(ch.lowercase()) // : String
     println(ch.uppercaseChar()) // : Char
     println(ch.lowercaseChar()) // : Char
+}
+
+
+/// String sınıfının substring metotları
+
+fun substring() {
+    val s = "ankara"
+    println(s.substring(2))
+    println(s.substring(2, 5)) //[2, 5)
+    println(s.substring(2..4)) // [2, 4]
+    println(s.substring(2..<5)) // [2, 5)
+    println(s.substring(2 until 5)) // [2, 5)
+}
+
+
+fun substringAfterBefore() {
+    val s = "ankara-istanbul-izmir"
+    println(s.substringAfter('-'))
+    println(s.substringBefore('-'))
+
+    val ss = "ankara-istanbul-;izmir"
+    println(ss.substringAfter("-;"))
+    println(ss.substringBefore("-;"))
+}
+
+fun substringWithMissingDelimiter() {
+    print("Input text:")
+    val s = readln()
+
+    println(s.substringAfter('-'))
+    println(s.substringAfter('-', "Zonguldak"))
+    println(s.substringBefore('-'))
+    println(s.substringBefore('-', "Izmir"))
+}
+
+
+fun substringBeforeAfterLast() {
+    print("Input text:")
+    val s = readln()
+
+    println(s.substringAfterLast('-'))
+    println(s.substringBeforeLast('-'))
+}
+
+fun findFileNameWithsubstringAfterLast() {
+    print("Dosya yol bilgisini giriniz:")
+    val path = readln()
+    val fileName = path.substringAfterLast('/') // substring(lastIndexOf('/') + 1)
+    println(fileName)
+}
+
+fun checkEmailInput() {
+    print("Input email:")
+    val email = readln()
+    val info = email.substringBefore('@', "Invalid email name")
+    val domain = email.substringAfter('@', "Invalid email domain")
+    val extension = email.substringAfterLast('.', "Invalid extension")
+
+    println("Info: ${info}")
+    println("Domain: ${domain}")
+    println("Extension: .${extension}")
 }
