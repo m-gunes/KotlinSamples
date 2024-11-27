@@ -1,8 +1,21 @@
 package org.csystem.subject
 
 import kotlin.random.Random
+import java.util.Random as JRandom
 
-fun main() = checkEmailInput()
+fun main() {
+
+    val rk = Random
+    val rj = JRandom()
+
+    for (i in 1..10)
+        print("%02d ".format(rk.nextInt(100)))
+
+    println()
+
+    for (i in 1..10)
+        print("%02d ".format(rj.nextInt(100)))
+}
 
 fun compareObject() {
     print("Input a number:")
@@ -229,7 +242,7 @@ fun checkEmailInput() {
     val domain = email.substringAfter('@', "Invalid email domain")
     val extension = email.substringAfterLast('.', "Invalid extension")
 
-    println("Info: ${info}")
-    println("Domain: ${domain}")
+    println("Info: $info")
+    println("Domain: $domain")
     println("Extension: .${extension}")
 }
